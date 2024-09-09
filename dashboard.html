@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuggyBillions Community Blog</title>
+    <link rel="icon" href="images/asset11.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsiveness.css">
+
+    <link rel="stylesheet" href="resources/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="resources/tabler-icons/webfont/tabler-icons.min.css">
+</head>
+<body>
+
+
+    <div class="overflow-x-hidden">
+
+        <nav class="navbar navbar-expand-lg py-3 fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="images/img4.png" alt="..." class="img-fluid">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form role="search" class="d-flex search-bar py-4 align-items-center mx-auto">
+                    <input type="text" class="form-control bg-transarent">
+                    <!-- <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </button> -->
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                </form>
+                <div class="d-flex durrr gap-4 align-items-center">
+                    <a href="#" class="nav-link d-flex align-items-center gap-2">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                        </svg> -->
+                        <i class="fa fa-edit"></i>
+                        <span class="">Write</span>
+                    </a>              
+                    <button class="davi d-flex align-items-center gap-2 justify-content-between">
+                        <div class="d-flex flex-column align-items-start">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                        <img src="images/img6.png" alt="..." width="32px" height="32px" style="border-radius: 50%; clip-path: circle();">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="menu-fl p-3" style="display: none;">
+            <div class="d-flex flex-column justify-content-between gap-3 h-100">
+                <div class="position-relative">
+                    <!-- SIDEBAR CONTENT -->
+                    <a href="#" class="py-2 rolll davi2">
+                        <img src="images/img5.png" alt="..." class="img-fluid mx-auto w-75">
+                        <small>can't take fun outta the developer.</small>
+                    </a>
+                    <nav class="navbar mt-3">
+                        <ul class="navbar-nav w-100 flex-column gap-2">
+                            <a href="#" class="nav-item rolll2 px-2 py-1 d-flex align-items-center gap-2" id="dashBtn">
+                                <i class="ti ti-components"></i>
+                                <span class="nav-link">Dashboard</span>
+                            </a>
+                            <a href="#myCourses" class="nav-item rolll2 px-2 py-1 d-flex align-items-center gap-2" id="courseBtn">
+                                <i class="ti ti-clipboard-text"></i> 
+                                <span class="nav-link">Course</span>
+                            </a>
+                            <a href="studentcertificate.html" class="nav-item rolll2 px-2 py-1 d-flex align-items-center gap-2" id="certifyBtn">
+                                <i class="ti ti-award"></i> 
+                                <span class="nav-link">Certificates</span>
+                            </a>
+                            <a href="studentchat.html" class="nav-item rolll2 active current2 px-2 py-1 d-flex align-items-center justify-content-between" id="chatBtn">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="ti ti-message"></i> 
+                                    <span class="nav-link">Chat</span>
+                                </div>
+                                <div class="chatCount p-1">99+</div>
+                            </a>
+                            <a href="studentprofile.html" class="nav-item rolll2 px-2 py-1 d-flex align-items-center gap-2" id="profileBtn">
+                                <i class="ti ti-user"></i> 
+                                <span class="nav-link">Profile</span>
+                            </a>
+                            <a href="studentsettings.html" class="nav-item rolll2 px-2 py-1 d-flex align-items-center gap-2">
+                                <i class="ti ti-settings"></i> 
+                                <span class="nav-link">Settings</span>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="d-flex flex-column justify-content-between gap-2">
+                    <div class="py-1 d-flex align-items-center py-1 px-2 gap-2 seclink" id="logOutBtn">
+                        <i class="ti ti-logout"></i> 
+                        <span class="nav-link">Logout</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="dashhero py-5" style="margin-top: 2.5rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hero-bg">
+                            <div class="card py-4 d-flex flex-column justify-content-between">
+                                <div class="upper d-flex flex-column gap-2">
+                                    <p>Trending</p>
+                                    <h1>What’s New in Life... English  or Spanish?</h1>
+                                    <div class="d-flex align-items-center gap-3 mt-3">
+                                        <img src="images/img6.png" alt="..." width="32px" height="32px" style="border-radius: 50%; clip-path: circle();">
+                                        <span>Favour ABDul</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column gap-4">
+                                    <p class="details">come play with daddy tope’s kid, but she refused becuase she is not willing to go through the same thing she wen through</p>
+                                    <button class="btn">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blogs pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar category-nav">
+                            <ul class="navbar-nav flex-row gap-5">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link" id="currentCategory">All</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Design</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Programming</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Writing</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-12 my-3">
+                        <div class="row">
+                            <div class="col-8 my-3 d-flex flex-column gap-3">
+                                <h5>Community</h5>
+                                <div class="card blog-card d-flex flex-row">
+                                    <div class="card-img" style="width: 25%;">
+                                        <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                                    </div>
+                                    <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                        <div class="d-flex flex-column gap-2">
+                                            <span>design</span>
+                                            <h1 class="m-0 p-0">What do I see IN mosko , Shey oun Whine me ni</h1>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <img src="images/img6.png" alt="..." width="30px" height="30px" style="border-radius: 50%; clip-path: circle();">
+                                                    <span>Tajudeen GBBF</span>
+                                                    <i class="fa fa-users emblem p-2"></i>
+                                                </div>
+                                                <small class="date">9 Sept 2024</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn blog-btn">Read More</button>
+                                            <div class="d-flex gap-3 fs-5">
+                                                <label class="ui-like">
+                                                    <input type="checkbox">
+                                                    <div class="like">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path></g></svg>
+                                                    </div>
+                                                </label>
+                                                <i class="fa fa-share-nodes"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 my-3 d-flex flex-column gap-3">
+                                <h5 class="text-end">Student</h5>
+                                <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <div class="card blog-card position-relative studentcard d-flex flex-column">
+                                            <div class="card-img" style="width: 100%;">
+                                                <img src="images/img8.png" alt="..." class="img-fluid w-100 h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 100%; gap: 2.2rem;">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <span>writing</span>
+                                                        <div class="d-flex align-items-center gap-3 fs-5">
+                                                            <label class="ui-like">
+                                                                <input type="checkbox">
+                                                                <div class="like">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path></g></svg>
+                                                                </div>
+                                                            </label>
+                                                            <i class="fa fa-share-nodes"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-3">
+                                                        <h1 class="m-0 p-0">Go Home and Get your Dog turns to A promblem don’t catch anything</h1>
+                                                        <button class="btn blog-btn">Read More</button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="images/img6.png" alt="..." width="30px" height="30px" style="border-radius: 50%; clip-path: circle();">
+                                                        <span>Tajudeen GBBF</span>
+                                                        <i class="fa fa-star emblem p-2"></i>
+                                                    </div>
+                                                    <small class="date">9 Sept 2024</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <div class="card blog-card position-relative studentcard d-flex flex-column">
+                                            <div class="card-img" style="width: 100%;">
+                                                <img src="images/img11.jpg" alt="..." class="img-fluid w-100 h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 100%; gap: 2.2rem;">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <span>writing</span>
+                                                        <div class="d-flex align-items-center gap-3 fs-5">
+                                                            <label class="ui-like">
+                                                                <input type="checkbox">
+                                                                <div class="like">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path></g></svg>
+                                                                </div>
+                                                            </label>
+                                                            <i class="fa fa-share-nodes"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-3">
+                                                        <h1 class="m-0 p-0">Go Home and Get your Dog turns to A promblem don’t catch anything</h1>
+                                                        <button class="btn blog-btn">Read More</button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="images/img6.png" alt="..." width="30px" height="30px" style="border-radius: 50%; clip-path: circle();">
+                                                        <span>Tajudeen GBBF</span>
+                                                        <i class="fa fa-star emblem p-2"></i>
+                                                    </div>
+                                                    <small class="date">9 Sept 2024</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <div class="card blog-card position-relative studentcard d-flex flex-column">
+                                            <div class="card-img" style="width: 100%;">
+                                                <img src="images/img14.jpg" alt="..." class="img-fluid w-100 h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 100%; gap: 2.2rem;">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <span>writing</span>
+                                                        <div class="d-flex align-items-center gap-3 fs-5">
+                                                            <label class="ui-like">
+                                                                <input type="checkbox">
+                                                                <div class="like">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path></g></svg>
+                                                                </div>
+                                                            </label>
+                                                            <i class="fa fa-share-nodes"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-3">
+                                                        <h1 class="m-0 p-0">Go Home and Get your Dog turns to A promblem don’t catch anything</h1>
+                                                        <button class="btn blog-btn">Read More</button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="images/img6.png" alt="..." width="30px" height="30px" style="border-radius: 50%; clip-path: circle();">
+                                                        <span>Tajudeen GBBF</span>
+                                                        <i class="fa fa-star emblem p-2"></i>
+                                                    </div>
+                                                    <small class="date">9 Sept 2024</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+
+    <script src="resources/bootstrap.bundle.min.js"></script>
+    <script src="resources/bootstrap.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
