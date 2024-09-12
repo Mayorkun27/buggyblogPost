@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuggyBillions Community Blog</title>
+    <link rel="icon" href="images/asset11.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsiveness.css">
+
+    <link rel="stylesheet" href="resources/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="resources/tabler-icons/webfont/tabler-icons.min.css">
+
+    <style>
+        body {
+            margin: auto;
+            background: #eaeaea;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <div class="overflow-x-hidden">
+
+        <nav class="navbar navbar-expand-lg py-3 fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/img2.png" alt="..." class="img-fluid d-none d-lg-block">
+                    <img src="images/img15.png" alt="..." class="img-fluid d-lg-none">
+                </a>
+                <div class="mx-auto trr">
+                    <h1 class="m-0 p-0">Create</h1>
+                </div>
+                <div class="d-flex durrr gap-4 align-items-center">   
+                    <button class="davi d-flex align-items-center gap-2 justify-content-between">
+                        <div class="d-lg-flex d-md-flex flex-column align-items-start d-none">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                        <i class="fa fa-chevron-down d-lg-none d-md-none"></i>
+                        <img src="images/img6.png" alt="..." width="32px" height="32px" style="border-radius: 50%; clip-path: circle();">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="menu-fl p-3" style="display: none;">
+            <div class="d-flex flex-column justify-content-between gap-3 h-100">
+                <div class="position-relative">
+                    <!-- SIDEBAR CONTENT -->
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="#" class="py-2 rolll davi2 px-0">
+                            <img src="images/img2.png" alt="..." class="img-fluid mx-auto w-75">
+                            <small>can't take fun outta the developer.</small>
+                        </a>
+                        <div class="gap-0 flex-column align-items-start davi3">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                    </div>
+                    <nav class="navbar mt-2 bg-transarent">
+                        <ul class="navbar-nav w-100 flex-column gap-2">
+                            <a href="dashboard.html" class="nav-link rolll2 d-flex align-items-center" id="dashBtn">
+                                <i class="fa fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="#" class="nav-link rolll2 d-flex align-items-center" id="courseBtn">
+                                <i class="fa fa-newspaper"></i> 
+                                <span>My Blogs</span>
+                            </a>
+                            <a href="profile.html" class="nav-link rolll2 d-flex align-items-center" id="certifyBtn">
+                                <i class="fa fa-user"></i> 
+                                <span>Profile</span>
+                            </a>
+                            <a href="create.html" class="nav-link rolll2 active current2 d-flex align-items-center" id="chatBtn">
+                                <i class="fa fa-plus-square"></i> 
+                                <span>Create Post</span>
+                            </a>
+                            <a href="settings.html" class="nav-link rolll2 d-flex align-items-center" id="profileBtn">
+                                <i class="fa fa-cog"></i> 
+                                <span>Settings</span>
+                            </a>
+                            <a href="feedback.html" class="nav-link rolll2 d-flex align-items-center">
+                                <i class="fa fa-comment"></i> 
+                                <span>Feedback</span>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="py-1 d-flex align-items-center px-1 seclink" id="logOutBtn">
+                    <i class="ti ti-logout"></i> 
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="dashhero py-5" style="margin-top: 2.5rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="wrapp" method="post" action="" enctype="multipart/form-data">
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="title" id="title" required="required" placeholder="Blog Title"/>
+                          </div>
+                          <div class="row">
+                            <div class= "col-md-6">
+                              <div class="form-group">
+                                <input type="file" class="form-control" name="bimgs" id="bimgs" required="required" placeholder="Upload image"/>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <div class="form-group">
+                                <select class="pe-5" name="tags" id="tags" required="required">
+                                    <option value="Select blog category" disabled selected>Select blog category</option>
+                                    <option value="Design">Design</option>
+                                    <option value="Programming">Programming</option>
+                                    <option value="Writing">Writing</option>
+                                </select>
+                               </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <textarea class="form-control bcontent" required="required" name="content" id="content" placeholder="Blogs Details"></textarea>
+                          </div>
+                          <div class="form-group text-center">
+                             <button name="Submit" class="btn upload-btn">Upload Post</button>
+                          </div>
+                        </form>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+
+    <script src="resources/bootstrap.bundle.min.js"></script>
+    <script src="resources/bootstrap.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

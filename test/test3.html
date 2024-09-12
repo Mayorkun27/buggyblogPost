@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/bootstrap.css">
+    <link rel="stylesheet" href="../resources/bootstrap.min.css">
+    <style>
+        body {
+  padding: 50px;
+}
+
+.content-item {
+  margin-bottom: 25px;
+  line-height: 20px;
+}
+
+.btn-delete {
+  margin-left: 15px;
+  cursor: pointer;
+  &:hover {
+    color: crimson;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="row">
+
+        <div id="blog-form" class="col-md-4">
+          <form id="contentForm">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input name="title" type="text" class="form-control form-control-lg" id="title" aria-describedby="" required/>
+            </div>
+            <div class="form-group">
+              <label for="">Body</label>
+              <textarea name="body" id="body" class="form-control form-control-lg" rows="10" cols="25" contenteditable="true"></textarea>
+            </div>
+            <div class="form-group form-check">
+              <input name="isDraft" id="isDraft" type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Save as draft?</label>
+            </div>
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <br>
+          <small>Adding a blog or other content entry here creates a payload object, which is then pushed to a content object, which is then displayed as if loaded from a database.</small>
+          <br>
+          <br>
+          <small>
+            Displaying entries excludes items saved as drafts.
+          </small>
+          <br>
+          <br>
+          <small>
+            <ul>
+              TODO
+              <li>add timestamp as unique id</li>
+              <li>add draft view</li>
+              <li>add delete item/draft function</li>
+              <li>make item editable</li>
+            </ul>
+          </small>
+        </div>
+      
+        <div class="col-md-8">
+          <h3 class="text-center">Content Database Output</h3>
+          <div id="content">
+      
+          </div>
+        </div>
+      
+      </div>
+
+
+      <script>
+        let content = [];
+displayContent();
+
+jQuery(function($) {
+  $("#body").shieldEditor({
+    height: 360
+  });
+});
+
+$("#contentForm").on("submit", submit);
+
+function submit(e) {
+  e.preventDefault();
+  let payload = {};
+  // map each value name and value to place on payload object
+  var serialized = $("#contentForm")
+    .serializeArray()
+    .forEach(function(input) {
+      payload[input.name] = input.value
+    });
+  payload.date = new Date();
+  payload.id = Date.parse(payload.date)
+  content.push(payload);
+  displayContent();
+}
+
+function displayContent() {
+  if (content.length) {
+    //clear content
+    $("#content").empty();
+    for (item in content) {
+      if (!content[item].isDraft) {
+        $("#content").append(`
+<div class="content-item" data-id="${Date.parse(content[item].date)}">
+<h3 class="content-title">${content[item].title}<span class="btn-delete material-icons">delete_forever</span></h3>
+</br>
+<div class="content-body"><p>${content[item].body}</p></div><br
+<small>${content[item].date}</small>
+</div>
+  `);
+        $(".btn-delete").click(function() {
+          deleteItem(this);
+        });
+      }
+    }
+  } else {
+    $("#content").empty();
+    $("#content").append(
+      '<span class="d-block text-center">Nothing here yet.</span>'
+    );
+  }
+}
+
+
+function deleteItem(item) {
+  $(item).parents().each(function(){
+    const id = parseInt($(this).attr('data-id'));
+    
+    if(id) {
+      for(let i = 0 ; i < content.length ; i++ ) {
+        const item = content[i];
+        if( item.id === id ) {
+          content.splice(i,1)
+          console.log(content)
+          displayContent()
+        }
+      }
+    } 
+  })
+}
+      </script>
+</body>
+</html>

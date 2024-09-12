@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Branding Image -->
+                    <a class="navbar-brand">
+                        Blog
+                    </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a target="_blank" href="{{ url('/') }}">Frontend</a></li>
+                    <li><a href="{{ url('/admin') }}">Admin Panel</a></li>
+                    <li><a href="{{ url('/logout') }}">Log out</a></li>
+                </ul>  
+                <!-- Right Side Of Navbar -->
+                <!--ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links>
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul-->
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Add Post</div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="POST">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="title" placeholder="Title">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <textarea name="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa fa-btn fa-user"></i> Publish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Order</div>
+
+                <div class="panel-body">
+                   <div class="post">
+                        <h2>title</h2>
+                        <p>content</p>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

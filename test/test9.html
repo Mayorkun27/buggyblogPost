@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+        input{
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 18px;
+            border: 2p solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        li{
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        li.hidden{
+            display: none;
+        }
+        li:hover{
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Filter</h1>
+    <input type="text" id="searchInput" placeholder="search for items...">
+
+    <ul id="itemList">
+        <li>Javascript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Ruby</li>
+        <li>PHP</li>
+    </ul>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const itemList = document.getElementById('itemList');
+        const items = itemList.getElementsByTagName("li");
+
+        searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase();
+            Array.from(items).forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        })
+    </script>
+</body>
+</html>

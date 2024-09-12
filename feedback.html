@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuggyBillions Community Blog</title>
+    <link rel="icon" href="images/asset11.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsiveness.css">
+
+    <link rel="stylesheet" href="resources/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="resources/tabler-icons/webfont/tabler-icons.min.css">
+
+    <style>
+        body {
+            margin: auto;
+            background: #eaeaea;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <div class="overflow-x-hidden">
+
+        <nav class="navbar navbar-expand-lg py-3 fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/img2.png" alt="..." class="img-fluid d-none d-lg-block">
+                    <img src="images/img15.png" alt="..." class="img-fluid d-lg-none">
+                </a>
+                <div class="mx-auto trr">
+                    <h1 class="m-0 p-0">Feedback</h1>
+                </div>
+                <div class="d-flex durrr gap-lg-4 gap-3 align-items-center">
+                    <a href="create.html" class="nav-link d-flex align-items-center gap-2">
+                        <i class="fa fa-edit"></i>
+                        <span class="d-none d-lg-block">Write</span>
+                    </a>              
+                    <button class="davi d-flex align-items-center gap-2 justify-content-between">
+                        <div class="d-lg-flex d-md-flex flex-column align-items-start d-none">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                        <i class="fa fa-chevron-down d-lg-none d-md-none"></i>
+                        <img src="images/img6.png" alt="..." width="32px" height="32px" style="border-radius: 50%; clip-path: circle();">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="menu-fl p-3" style="display: none;">
+            <div class="d-flex flex-column justify-content-between gap-3 h-100">
+                <div class="position-relative">
+                    <!-- SIDEBAR CONTENT -->
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="#" class="py-2 rolll davi2 px-0">
+                            <img src="images/img2.png" alt="..." class="img-fluid mx-auto w-75">
+                            <small>can't take fun outta the developer.</small>
+                        </a>
+                        <div class="gap-0 flex-column align-items-start davi3">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                    </div>
+                    <nav class="navbar mt-2 bg-transarent">
+                        <ul class="navbar-nav w-100 flex-column gap-2">
+                            <a href="dashboard.html" class="nav-link rolll2 d-flex align-items-center" id="dashBtn">
+                                <i class="fa fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="#" class="nav-link rolll2 d-flex align-items-center" id="courseBtn">
+                                <i class="fa fa-newspaper"></i> 
+                                <span>My Blogs</span>
+                            </a>
+                            <a href="profile.html" class="nav-link rolll2 active current2 d-flex align-items-center" id="certifyBtn">
+                                <i class="fa fa-user"></i> 
+                                <span>Profile</span>
+                            </a>
+                            <a href="create.html" class="nav-link rolll2 d-flex align-items-center" id="chatBtn">
+                                <i class="fa fa-plus-square"></i> 
+                                <span>Create Post</span>
+                            </a>
+                            <a href="settings.html" class="nav-link rolll2 d-flex align-items-center" id="profileBtn">
+                                <i class="fa fa-cog"></i> 
+                                <span>Settings</span>
+                            </a>
+                            <a href="#" class="nav-link rolll2 d-flex align-items-center">
+                                <i class="fa fa-comment"></i> 
+                                <span>Feedback</span>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="py-1 d-flex align-items-center px-1 seclink" id="logOutBtn">
+                    <i class="ti ti-logout"></i> 
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="dashhero py-5" style="margin-top: 2.5rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="feedback wrapp p-lg-4">
+                            <!-- <h1>Feedback</h1> -->
+                            <p>What would you like to share with us?</p>
+                            <ul class="type">
+                              <li class="active"><a href="#"><i class="fa fa-bug"></i> Problem</a></li>
+                              <li><a href="#"><i class="fa fa-question-circle"></i> Question</a></li>
+                              <li><a href="#"><i class="fa fa-lightbulb"></i> Suggestion</a></li>
+                              <li><a href="#"><i class="fa fa-heart"></i> Kudos</a></li>
+                            </ul>
+                            <form class="update text-center d-flex flex-column gap-3">
+                              <textarea name="feedBackText" id="feedBackText" placeholder="Your feedback"></textarea>
+                              <input type="email" class="form-control" placeholder="Your Email (will not be published)" />
+                              <button class="btn mx-auto" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+                            </form>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+
+    <script src="resources/bootstrap.bundle.min.js"></script>
+    <script src="resources/bootstrap.js"></script>
+    <script src="script.js"></script>
+
+    <!-- PROFILE MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-none justify-content-between border-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><strong id="username">Tajudeen</strong>'s Profile</h1>
+                </div>
+                <div class="modal-body border-0 position-relative">
+                    <!-- VIEW OTHERS PERSONAL INFOS -->
+                    <div class="row">
+                        <i type="button" class="py-1 px-2 fa fa-close fa-2x" data-bs-dismiss="modal" aria-label="Close"></i>
+                        <div class="col-12">
+                            <div class="p-1 px-2 encol mx-auto text-center">
+                                <i class="fa fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 rrrr text-center">
+                            <h1 class="profile-card-name">Thank You!</h1>
+                            <p id="uBio">Want to know about me?? Check out my socials!.</p>
+                            <div class="profile-card-inf">
+                                <div class="profile-card-inf-item">
+                                  <div class="profile-card-inf-title">0</div>
+                                  <div class="profile-card-inf-txt">Blogs</div>
+                                </div>
+                        
+                                <div class="profile-card-inf-item">
+                                  <div class="profile-card-inf-title">0</div>
+                                  <div class="profile-card-inf-txt">Total Likes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const feedback = document.querySelector(".feedback");
+        const feedbackType = feedback.getElementsByTagName("li")
+
+        console.log(feedbackType)
+        Array.from(feedbackType).forEach(li => {
+            li.addEventListener("click", () => {
+                removeActiveState()
+                li.classList.add("active");
+            })
+        })
+
+        function removeActiveState () {
+            Array.from(feedbackType).forEach(li => {
+                li.classList.remove("active");
+            })
+        }
+
+    </script>
+</body>
+</html>
