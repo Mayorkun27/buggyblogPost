@@ -110,14 +110,15 @@
                             <!-- <h1>Feedback</h1> -->
                             <p>What would you like to share with us?</p>
                             <ul class="type">
-                              <li class="active"><a href="#"><i class="fa fa-bug"></i> Problem</a></li>
+                              <li><a href="#"><i class="fa fa-bug"></i> Problem</a></li>
                               <li><a href="#"><i class="fa fa-question-circle"></i> Question</a></li>
                               <li><a href="#"><i class="fa fa-lightbulb"></i> Suggestion</a></li>
                               <li><a href="#"><i class="fa fa-heart"></i> Kudos</a></li>
                             </ul>
                             <form class="update text-center d-flex flex-column gap-3">
                               <textarea name="feedBackText" id="feedBackText" placeholder="Your feedback"></textarea>
-                              <input type="email" class="form-control" placeholder="Your Email (will not be published)" />
+                              <input type="email" class="form-control" placeholder="Your Email (will not be published)"/>
+                              <input class="form-control d-none" type="text" id="feedbackCategory" name="feedbackCategory">
                               <button class="btn mx-auto" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
                             </form>
                           </div>
@@ -128,11 +129,6 @@
 
     </div>
     
-
-    <script src="resources/bootstrap.bundle.min.js"></script>
-    <script src="resources/bootstrap.js"></script>
-    <script src="script.js"></script>
-
     <!-- PROFILE MODAL -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -146,23 +142,12 @@
                         <i type="button" class="py-1 px-2 fa fa-close fa-2x" data-bs-dismiss="modal" aria-label="Close"></i>
                         <div class="col-12">
                             <div class="p-1 px-2 encol mx-auto text-center">
-                                <i class="fa fa-check"></i>
+                                <i class="fa fa-check fa-7x" style="color: #786fab;"></i>
                             </div>
                         </div>
                         <div class="col-12 rrrr text-center">
                             <h1 class="profile-card-name">Thank You!</h1>
-                            <p id="uBio">Want to know about me?? Check out my socials!.</p>
-                            <div class="profile-card-inf">
-                                <div class="profile-card-inf-item">
-                                  <div class="profile-card-inf-title">0</div>
-                                  <div class="profile-card-inf-txt">Blogs</div>
-                                </div>
-                        
-                                <div class="profile-card-inf-item">
-                                  <div class="profile-card-inf-title">0</div>
-                                  <div class="profile-card-inf-txt">Total Likes</div>
-                                </div>
-                            </div>
+                            <p id="uBio">Thanks for giving your feedback, your response is highly valued.</p>
                         </div>
                     </div>
                 </div>
@@ -170,15 +155,28 @@
         </div>
     </div>
 
+    <script src="resources/bootstrap.bundle.min.js"></script>
+    <script src="resources/bootstrap.js"></script>
+    <script src="script.js"></script>
+
     <script>
         const feedback = document.querySelector(".feedback");
         const feedbackType = feedback.getElementsByTagName("li")
 
-        console.log(feedbackType)
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Click the first link at default
+            feedbackType[0].click();
+
+        })
+
         Array.from(feedbackType).forEach(li => {
             li.addEventListener("click", () => {
                 removeActiveState()
                 li.classList.add("active");
+                const category = li.textContent;
+                document.getElementById("feedbackCategory").value = category;
             })
         })
 
@@ -189,5 +187,6 @@
         }
 
     </script>
+
 </body>
 </html>
