@@ -9,7 +9,7 @@
 }
 .ui-like input{
     -webkit-appearance: none;
-    moz-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     display: none;
 }
@@ -182,10 +182,10 @@
 @media (min-width: 200px) and (max-width: 991px) { 
     .blog-card{
         font-size: 12px;
-        h1{
-            font-size: 20px;
-            line-height: 25.41px;
-        }
+    }
+    .blog-card h1{
+        font-size: 20px;
+        line-height: 25.41px;
     }
     .navbar-brand{
         width: 10%;
@@ -236,10 +236,10 @@
 @media (min-width: 767px) and (max-width: 991px) { 
     .blog-card{
         font-size: 12px;
-        h1{
-            font-size: 20px;
-            line-height: 25.41px;
-        }
+    }
+    .blog-card h1{
+        font-size: 20px;
+        line-height: 25.41px;
     }
     .carousel-item .studentcard{
         display: flex !important;
@@ -247,22 +247,35 @@
     }
     .hero-bg{
         height: 54vh;
-        .card{
-            width: 53%;
-            h1{
-                font-size: 32px;
-                line-height: 40.51px;
-            }
-            .details{
-                line-height: 22.15px;
-            }
-        }
+    }
+    .hero-bg .card{
+        width: 53%;
+    }
+    .hero-bg .card h1{
+        font-size: 32px;
+        line-height: 40.51px;
+    }
+    .hero-bg .card .details{
+        line-height: 22.15px;
     }
     .feedback{
         margin: 5% auto !important;
     }
     .menu-fl{
         transform: translateY(4%);
+    }
+    .fffff{
+        width: 40% !important;
+        height: max-content !important;
+        padding-bottom: 2rem !important;
+    }
+    .my-blogs,
+    .fullblog{
+        margin-top: 5rem !important;
+    }
+    .fullblog .read-bg,
+    .my-blogs .read-bg{
+        height: 30vh;
     }
 }
 
@@ -278,15 +291,24 @@
         color: #282828;
         border-radius: 5px;
         background: #D9D9D9;
-        #fullname{
-            font-size: 15px;
-            font-weight: 600;
-            line-height: 14.15px;
-        }
-        #username{
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 14.52px;
-        }
+    }
+    .davi3 #fullname{
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 14.15px;
+    }
+    .davi3 #username{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 14.52px;
+    }
+}
+
+@keyframes fade {
+    0%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 100%;
     }
 }

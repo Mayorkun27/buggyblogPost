@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuggyBillions Community Blog</title>
+    <link rel="icon" href="images/asset11.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsiveness.css">
+
+    <link rel="stylesheet" href="resources/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="resources/tabler-icons/webfont/tabler-icons.min.css">
+    <style>
+        .comment-section{
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .comment{
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .replies{
+            margin-left: 20px;
+            animation: fade .5s ease 0s 1;
+        }
+
+        .reply-form-template textarea {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .reply-form-template {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="overflow-x-hidden">
+
+        <nav class="navbar navbar-expand-lg py-3 fixed-top">
+            <div class="container d-flex flex-row justify-content-between">
+                <a class="navbar-brand" href="#">
+                    <img src="images/img2.png" alt="..." class="img-fluid d-none d-lg-block">
+                    <img src="images/img15.png" alt="..." class="img-fluid d-lg-none">
+                </a>
+                <div class="d-flex durrr gap-4 align-items-center">
+                    <a href="create.html" class="nav-link d-flex align-items-center gap-2">
+                        <i class="fa fa-edit"></i>
+                        <span class="d-none d-lg-block">Write</span>
+                    </a>              
+                    <button class="davi d-flex align-items-center gap-2 justify-content-between">
+                        <div class="d-lg-flex d-md-flex flex-column align-items-start d-none">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                        <i class="fa fa-chevron-down d-lg-none d-md-none"></i>
+                        <img src="images/img6.png" alt="..." width="32px" height="32px" style="border-radius: 50%; clip-path: circle();">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="menu-fl p-3" style="display: none;">
+            <div class="d-flex flex-column justify-content-between gap-3 h-100">
+                <div class="position-relative">
+                    <!-- SIDEBAR CONTENT -->
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="dashboard.html" class="py-2 rolll davi2 px-0">
+                            <img src="images/img2.png" alt="..." class="img-fluid mx-auto w-75">
+                            <small>can't take fun outta the developer.</small>
+                        </a>
+                        <div class="gap-0 flex-column align-items-start davi3">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                    </div>
+                    <nav class="navbar mt-2 bg-transarent">
+                        <ul class="navbar-nav w-100 flex-column gap-2">
+                            <a href="dashboard.html" class="nav-link rolll2 d-flex align-items-center" id="dashBtn">
+                                <i class="fa fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="myblogs.html" class="nav-link rolll2 d-flex align-items-center" id="courseBtn">
+                                <i class="fa fa-newspaper"></i> 
+                                <span>My Blogs</span>
+                            </a>
+                            <a href="profile.html" class="nav-link rolll2 d-flex align-items-center" id="certifyBtn">
+                                <i class="fa fa-user"></i> 
+                                <span>Profile</span>
+                            </a>
+                            <a href="create.html" class="nav-link rolll2 d-flex align-items-center" id="chatBtn">
+                                <i class="fa fa-plus-square"></i> 
+                                <span>Create Post</span>
+                            </a>
+                            <a href="settings.html" class="nav-link rolll2 d-flex align-items-center" id="profileBtn">
+                                <i class="fa fa-cog"></i> 
+                                <span>Settings</span>
+                            </a>
+                            <a href="feedback.html" class="nav-link rolll2 d-flex align-items-center">
+                                <i class="fa fa-comment"></i> 
+                                <span>Feedback</span>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="py-1 d-flex align-items-center px-1 seclink" id="logOutBtn">
+                    <i class="ti ti-logout"></i> 
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+        
+        <section class="fullblog py-5 position-relative" style="margin-top: 3rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 eee">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-8 col-12 d-flex flex-column gap-3">
+                                <div class="card bg-transarent border-0" id="post-1">
+                                    <h1 class="m-0 p-0" id="title">What do I see IN mosko, Shey oun Whine me ni</h1>
+                                    <div class="d-flex my-3 justify-content-between align-items-center gap-4">
+                                        <div class="d-flex yyy flex-lg-row flex-md-row flex-column align-items-lg-center align-items-md-center gap-lg-4 gap-md-4 gap-2">
+                                            <span class="tag d-flex align-items-center" style="width: max-content !important;"><i class="ti ti-tag me-1"></i><span>design</span></span>
+                                            <small class="date m-0 p-0">9 Sept 2024</small>
+                                            <h6 class="m-0 p-0">by Tajudeen GBBF</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <a class="nav-link" href="#commentSection">
+                                                <span class="d-flex align-items-center">
+                                                    <i class="ti ti-message me-1"></i>
+                                                    <span>3</span>
+                                                </span>
+                                            </a>
+                                            <span class="d-flex align-items-center">
+                                                <label class="ui-like me-1" data-post-id="post-1">
+                                                    <input type="checkbox">
+                                                    <div class="like">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path></g></svg>
+                                                    </div>
+                                                </label>
+                                                <span>4</span>
+                                            </span>
+                                            <i class="fa fa-share-nodes" data-post-id="post-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="read-bg mt-2 card-img">
+                                        <img src="images/img5.png" alt="..." class="img-fluid h-100 w-100" style="object-fit: cover !important;">
+                                    </div>
+                                    <div class="card-text p-3 pb-0 fw-lighter">
+                                        <p>Lorem Ipsum Dolor sit amet consecteur apidisicing elit dolor debitis excepturi eum deserunt? Accusantium minus saepe labore qui eaque, reprehenderit aliquam dicta veritatis sequi commodi blanditiis quas optio soluta sunt cupiditate eureprehenderit aliquam dicta veritatis sequi commodi blanditiis quas optio soluta sunt cupiditate eureprehenderit aliquam dicta veritatis sequi commodi blanditiis quas optio soluta sunt cupiditate eum quae quasi? Vero aspernatur accusantium culpa ipsa iste nobis. Atque quaerat ipsam sed ab delectus dolores temporibus minus quam quasi molestias quisquam incidunt magni ullam, suscipit dolorum non provident vel qui similique dolorem labore obcaecati. Impedit, fuga dolore cum molestiae molestias quibusdam, consectetur enim eligendi voluptatibus tempore officia. Eveniet aperiam ipsum atque nihil laborum temporibus, numquam necessitatibus at accusamus culpa sit eum minus molestias inveabo sint accusamus aut placeat deleniti aperiam! Quaerat est excepturi qui dolorem quidem, explicabo aspernatur at facere atque, odit eligendi porro modi tenetur tempore natus, voluptatibus ex. Maiores omnis animi accusamus quod odio modi eligendi soluta expedita sed ducimus, maxime ipsam beatae atque quas similique neque eos ea! Nihil maiores nulla perspiciatis ducimus in eveniet expedita nostrum voluptas quia accusamus non, veritatis voluptatibus, exercitationemptate, ipsum consectetur. Voluptates incidunt aperiam, fugit consectetur ut accusamus dignissimos laboriosam eum? Quis quam sit illo! Incidunt qui blanditiis provident amet vitae neque ab adipisci accusamus officia totam, ad quia aperiam saepe. Dolore pariatur consequatur nihil id, consequuntur repellat ipsam. Distinctio sint sit sapiente, repellat unde nesciunt eveniet exercitationem praesentium. Vitae fuga eaque molestias magni dolorum iure libero culpa laudantium sit odit, laboriosam accusantium consectetur ipsam necessitatibus vero!</p>
+                                    </div>
+                                </div>
+                                <hr class="border-2" style="height: 3px !important; width: 100%; border-color: #555 !important; margin-top: 0px;">
+                            </div>
+                            <div class="col-1 d-lg-block d-none p-0 m-0" style="width: max-content !important;">
+                                <hr class="border-start border-2" style="width: 3px !important; height: 100%; border-color: #555 !important; margin-top: 0px;">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-12 fffff d-lg-flex d-md-flex d-none flex-column gap-3 px-3 p-2 rounded" style="width: 30%; background: #eaeaea;" id="duuu">
+                                <h5>Top News</h5>
+                                <div class="card blog-card p-2 gap-2 d-flex flex-row" id="post-1">
+                                    <div class="card-img position-relative" style="width: 25%;">
+                                        <img src="images/img7.png" alt="..." class="img-fluid h-100" style="border-radius: 10px;">
+                                        <span id="count">1</span>
+                                    </div>
+                                    <div class="card-text d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                        <div class="d-flex flex-column">
+                                            <span>design</span>
+                                            <h1 class="m-0 p-0">What do I see IN mosko , Shey oun Whine me ni</h1>
+                                            <div class="d-flex mt-2 justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <img src="images/img6.png" alt="..." width="20px" height="20px" style="clip-path: circle();">
+                                                    <span id="name">Tajudeen GBBF</span>
+                                                    <i class="fa fa-star emblem p-1"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card blog-card p-2 gap-2 d-flex flex-row" id="post-2">
+                                    <div class="card-img position-relative" style="width: 25%;">
+                                        <img src="images/img7.png" alt="..." class="img-fluid h-100" style="border-radius: 10px;">
+                                        <span id="count">2</span>
+                                    </div>
+                                    <div class="card-text d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                        <div class="d-flex flex-column">
+                                            <span>design</span>
+                                            <h1 class="m-0 p-0">What do I see IN mosko , Shey oun Whine me ni</h1>
+                                            <div class="d-flex mt-2 justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <img src="images/img6.png" alt="..." width="20px" height="20px" style="clip-path: circle();">
+                                                    <span id="name">Tajudeen GBBF</span>
+                                                    <i class="fa fa-star emblem p-1"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card blog-card p-2 gap-2 d-flex flex-row" id="post-3">
+                                    <div class="card-img position-relative" style="width: 25%;">
+                                        <img src="images/img7.png" alt="..." class="img-fluid h-100" style="border-radius: 10px;">
+                                        <span id="count">3</span>
+                                    </div>
+                                    <div class="card-text d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                        <div class="d-flex flex-column">
+                                            <span>design</span>
+                                            <h1 class="m-0 p-0">What do I see IN mosko , Shey oun Whine me ni</h1>
+                                            <div class="d-flex mt-2 justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <img src="images/img6.png" alt="..." width="20px" height="20px" style="clip-path: circle();">
+                                                    <span id="name">Tajudeen GBBF</span>
+                                                    <i class="fa fa-users emblem p-1"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card blog-card p-2 gap-2 d-flex flex-row" id="post-4">
+                                    <div class="card-img position-relative" style="width: 25%;">
+                                        <img src="images/img7.png" alt="..." class="img-fluid h-100" style="border-radius: 10px;">
+                                        <span id="count">4</span>
+                                    </div>
+                                    <div class="card-text d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                        <div class="d-flex flex-column">
+                                            <span>design</span>
+                                            <h1 class="m-0 p-0">What do I see IN mosko , Shey oun Whine me ni</h1>
+                                            <div class="d-flex mt-2 justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <img src="images/img6.png" alt="..." width="20px" height="20px" style="clip-path: circle();">
+                                                    <span id="name">Tajudeen GBBF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card blog-card p-2 gap-2 d-flex flex-row" id="post-5">
+                                    <div class="card-img position-relative" style="width: 25%;">
+                                        <img src="images/img7.png" alt="..." class="img-fluid h-100" style="border-radius: 10px;">
+                                        <span id="count">5</span>
+                                    </div>
+                                    <div class="card-text d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                        <div class="d-flex flex-column">
+                                            <span>design</span>
+                                            <h1 class="m-0 p-0">What do I see IN mosko , Shey oun Whine me ni</h1>
+                                            <div class="d-flex mt-2 justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <img src="images/img6.png" alt="..." width="20px" height="20px" style="clip-path: circle();">
+                                                    <span id="name">Tajudeen GBBF</span>
+                                                    <i class="fa fa-star emblem p-1"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card blog-card subscribe-card border-0 px-3 py-3 mt-5">
+                                    <form method="post" class="gap-3 text-center d-flex align-items-center flex-column">
+                                        <div>
+                                            <h5 class="p-0 m-0">Subscribe to newsletter</h5>
+                                            <small class="p-0 m-0">Be the first to know when we get a new story...</small>    
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 flex-column w-100">
+                                            <input type="email" name="uEmail" id="uEmail" placeholder="Enter your Email Address" class="form-control">
+                                            <button class="btn">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-7" id="commentSection">
+                                <!-- If no comments yet -->
+                                <h3 class="text-center">No Comments Yet...</h3>
+
+                                <!-- How users comment appear -->
+                                <div class="comment-section">
+                                    <h3>Comments</h3>
+                                    <!-- Original Comment (YOU ARE TO REPRODUCE THIS WHOLE COMMENT CONTAINER ONCE A USER COMMENTS)-->
+                                    <div class="comment" id="comment-1"> <!-- Don't forget to increment all Id's -->
+                                        <div class="card comment-card p-3 d-flex gap-2 flex-column">
+                                            <div class="d-flex flex-row justify-content-between align-items-center gap-3">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <img src="images/img6.png" class="img-fluid" alt="..." width="32px" height="32px" style="clip-path: circle();">
+                                                    <b>Tajudeen GBBF</b>
+                                                </div>
+                                                <small>23 Sept, 2024</small>
+                                            </div>
+                                            <div class="card-text d-flex flex-column border-0">
+                                                <div class="d-flex flex-column">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nobis labore praesentium veritatis voluptatum sit aliquid non id placeat ab autem deleniti nesciunt architecto vitae assumenda alias ad quibusdam dignissimos aperiam, nulla ipsa odio quasi veniam. Voluptates nihil, fugiat ipsa et doloremque iste perferendis laborum, earum officiis soluta ut? Non.</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn reply-btn" data-comment-id="1">Reply</button>
+                                                <!-- Button to toggle replies -->
+                                                <button class="toggle-replies-btn bg-transparent border-0 text-primary" data-comment-id="1" style="display: none;">Hide Replies...</button>
+                                            </div>
+                                        </div>
+                                        <!-- Reply Container to hold all replies -->
+                                        <div class="replies" id="replies-1"></div>
+                                    </div>
+                                  
+                                    <!-- Reply Form Template -->
+                                    <div class="reply-form-template" style="display: none;">
+                                        <textarea rows="2" placeholder="Write a comment..." style="resize: none; box-shadow: none;" class="form-control"></textarea>
+                                        <button class="btn submit-reply-btn">Submit</button>
+                                    </div>
+                                </div>
+
+                                <!-- To post my comment -->
+                                <form class="row create-post-comment blog-card">
+                                    <div class="col-12 my-3">
+                                        <textarea rows="5" placeholder="Write a comment..." style="overflow: hidden; resize: none;" class="form-control"></textarea>
+                                    </div>
+                                    <button class="btn ms-auto me-3">Post</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!-- PROFILE MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-none justify-content-between border-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><strong id="username">Tajudeen</strong>'s Profile</h1>
+                </div>
+                <div class="modal-body border-0 position-relative">
+                    <!-- VIEW OTHERS PERSONAL INFOS -->
+                    <div class="row">
+                        <i type="button" class="py-1 px-2 fa fa-close fa-2x" data-bs-dismiss="modal" aria-label="Close"></i>
+                        <div class="col-12">
+                            <div class="p-1 px-2 encol mx-auto text-center">
+                                <img src="images/img11.jpg" alt="..." class="img-fluid" width="100%" height="100%" style="clip-path: circle(); object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col-12 rrrr text-center">
+                            <h1 class="profile-card-name">Farinde Reuben</h1>
+                            <p id="uBio">Want to know about me?? Check out my socials!.</p>
+                            <div class="profile-card-inf">
+                                <div class="profile-card-inf-item">
+                                  <div class="profile-card-inf-title">0</div>
+                                  <div class="profile-card-inf-txt">Blogs</div>
+                                </div>
+                        
+                                <div class="profile-card-inf-item">
+                                  <div class="profile-card-inf-title">0</div>
+                                  <div class="profile-card-inf-txt">Total Likes</div>
+                                </div>
+                            </div>
+                            <div class="profile-card-social">
+                                <a href="" class="profile-card-social-item github" target="_blank">
+                                    <span class="icon-font d-flex">
+                                        <svg class="icon"><use xlink:href="#icon-github"></use></svg>
+                                    </span>
+                                </a>
+                                <a href="" class="profile-card-social-item twitter" target="_blank">
+                                    <span class="icon-font d-flex justify-content-center align-items-center">
+                                        <i class="ti ti-brand-x"></i>
+                                    </span>
+                                </a>
+                                <a href="" class="profile-card-social-item linkedin" target="_blank">
+                                  <span class="icon-font d-flex">
+                                    <i class="ti ti-brand-linkedin"></i>                             
+                                  </span>
+                                </a>
+                                <a href="" class="profile-card-social-item instagram" target="_blank">
+                                  <span class="icon-font d-flex">
+                                      <svg class="icon"><use xlink:href="#icon-instagram"></use></svg>
+                                  </span>
+                                </a>
+                                <a href="#" class="profile-card-social-item facebook" target="_blank">
+                                  <span class="icon-font d-flex">
+                                      <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+                                  </span>
+                                </a>
+                                <a href="" class="profile-card-social-item web" target="_blank">
+                                  <span class="icon-font d-flex">
+                                    <i class="ti ti-world"></i>                              
+                                  </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.reply-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const commentId = this.getAttribute('data-comment-id');
+                const replyContainer = document.getElementById(`replies-${commentId}`);
+                const toggleRepliesBtn = document.querySelector(`.toggle-replies-btn[data-comment-id="${commentId}"]`);
+
+                // Check if a reply form already exists
+                if (!replyContainer.querySelector('.reply-form')) {
+                    const replyForm = document.querySelector('.reply-form-template').cloneNode(true);
+                    replyForm.style.display = 'block';
+                    replyForm.classList.add('reply-form');
+
+                    // Add event listener to submit the reply
+                    replyForm.querySelector('.submit-reply-btn').addEventListener('click',() => {
+                        const replyText = replyForm.querySelector('textarea').value;
+                        if (replyText.trim() !== "") {
+                            const newReply = document.createElement('div');
+                            newReply.classList.add('comment');
+                            newReply.innerHTML = `
+                                <div class="card comment-card p-3 d-flex gap-2 flex-column">
+                                    <div class="card-text d-flex flex-column border-0">
+                                        <p>${replyText}</p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="images/img6.png" class="img-fluid" alt="..." width="25px" height="25px" style="clip-path: circle();">
+                                            <b>Username</b>
+                                        </div>
+                                        <small>Reply date</small>
+                                    </div>
+                                </div>
+                            `;
+                            replyContainer.appendChild(newReply);
+                            if (replyContainer.children.length > 0) {
+                                toggleRepliesBtn.style.display = 'block';
+                            }
+                            replyForm.remove();
+                        }
+                    });
+
+                    replyContainer.appendChild(replyForm);
+                }
+            });
+        });
+
+
+        document.querySelectorAll('.toggle-replies-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const commentId = this.getAttribute('data-comment-id');
+                const replyContainer = document.getElementById(`replies-${commentId}`);
+
+                if (replyContainer.style.display === 'none' || replyContainer.style.display === '') {
+                    replyContainer.style.display = 'block';
+                    this.textContent = 'Hide Replies...';
+                } else {
+                    replyContainer.style.display = 'none';
+                    this.textContent = 'Show Replies...';
+                }
+            });
+        });
+    </script>
+
+    <svg hidden>
+
+        <defs>
+      
+            <symbol id="icon-github" viewBox="0 0 32 32">
+                <title>github</title>
+                <path d="M16.192 0.512c-8.832 0-16 7.168-16 16 0 7.072 4.576 13.056 10.944 15.168 0.8 0.16 1.088-0.352 1.088-0.768 0-0.384 0-1.632-0.032-2.976-4.448 0.96-5.376-1.888-5.376-1.888-0.736-1.856-1.792-2.336-1.792-2.336-1.44-0.992 0.096-0.96 0.096-0.96 1.6 0.128 2.464 1.664 2.464 1.664 1.44 2.432 3.744 1.728 4.672 1.344 0.128-1.024 0.544-1.728 1.024-2.144-3.552-0.448-7.296-1.824-7.296-7.936 0-1.76 0.64-3.168 1.664-4.288-0.16-0.416-0.704-2.016 0.16-4.224 0 0 1.344-0.416 4.416 1.632 1.28-0.352 2.656-0.544 4-0.544s2.72 0.192 4 0.544c3.040-2.080 4.384-1.632 4.384-1.632 0.864 2.208 0.32 3.84 0.16 4.224 1.024 1.12 1.632 2.56 1.632 4.288 0 6.144-3.744 7.488-7.296 7.904 0.576 0.512 1.088 1.472 1.088 2.976 0 2.144-0.032 3.872-0.032 4.384 0 0.416 0.288 0.928 1.088 0.768 6.368-2.112 10.944-8.128 10.944-15.168 0-8.896-7.168-16.032-16-16.032z"></path>
+                <path d="M6.24 23.488c-0.032 0.064-0.16 0.096-0.288 0.064-0.128-0.064-0.192-0.16-0.128-0.256 0.032-0.096 0.16-0.096 0.288-0.064 0.128 0.064 0.192 0.16 0.128 0.256v0z"></path>
+                <path d="M6.912 24.192c-0.064 0.064-0.224 0.032-0.32-0.064s-0.128-0.256-0.032-0.32c0.064-0.064 0.224-0.032 0.32 0.064s0.096 0.256 0.032 0.32v0z"></path>
+                <path d="M7.52 25.12c-0.096 0.064-0.256 0-0.352-0.128s-0.096-0.32 0-0.384c0.096-0.064 0.256 0 0.352 0.128 0.128 0.128 0.128 0.32 0 0.384v0z"></path>
+                <path d="M8.384 26.016c-0.096 0.096-0.288 0.064-0.416-0.064s-0.192-0.32-0.096-0.416c0.096-0.096 0.288-0.064 0.416 0.064 0.16 0.128 0.192 0.32 0.096 0.416v0z"></path>
+                <path d="M9.6 26.528c-0.032 0.128-0.224 0.192-0.384 0.128-0.192-0.064-0.288-0.192-0.256-0.32s0.224-0.192 0.416-0.128c0.128 0.032 0.256 0.192 0.224 0.32v0z"></path>
+                <path d="M10.912 26.624c0 0.128-0.16 0.256-0.352 0.256s-0.352-0.096-0.352-0.224c0-0.128 0.16-0.256 0.352-0.256 0.192-0.032 0.352 0.096 0.352 0.224v0z"></path>
+                <path d="M12.128 26.4c0.032 0.128-0.096 0.256-0.288 0.288s-0.352-0.032-0.384-0.16c-0.032-0.128 0.096-0.256 0.288-0.288s0.352 0.032 0.384 0.16v0z"></path>
+            </symbol>
+        
+            <symbol id="icon-facebook" viewBox="0 0 32 32">
+                <title>facebook</title>
+                <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+            </symbol>
+        
+            <symbol id="icon-instagram" viewBox="0 0 32 32">
+                <title>instagram</title>
+                <path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+                <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+                <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+            </symbol>
+            
+        </defs>
+    </svg>
+
+    <script src="resources/bootstrap.bundle.min.js"></script>
+    <script src="resources/bootstrap.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load liked posts from localStorage
+            const likedPosts = JSON.parse(localStorage.getItem('likedPosts')) || {};
+        
+            document.querySelectorAll('.ui-like').forEach(likeLabel => {
+                const postId = likeLabel.getAttribute('data-post-id');
+                const checkbox = likeLabel.querySelector('input');
+        
+                checkbox.checked = likedPosts[postId] || false;
+        
+                checkbox.addEventListener('change', () => {
+                    likedPosts[postId] = checkbox.checked;
+                    localStorage.setItem('likedPosts', JSON.stringify(likedPosts));
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Function to share content
+        document.addEventListener('DOMContentLoaded', () => {
+            const shareContent = (url, title) => {
+                if (navigator.share) {
+                    // Use Web Share API if available
+                    navigator.share({
+                        title: title,
+                        url: url
+                    }).then(() => {
+                        console.log('Thanks for sharing!');
+                    }).catch((error) => {
+                        console.log('Share failed:', error);
+                    });
+                } else {
+                    // Fallback: Show a custom share dialog
+                    const shareUrl = encodeURIComponent(url);
+                    const shareTitle = encodeURIComponent(title);
+                    
+                    const sharePopupUrl1 = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`; // Example for Facebook
+                    const sharePopupUrl2 = `https://www.twitter.com/share?u=${shareUrl}`; // Example for Twitter
+                    const sharePopupUrl3 = `https://www.t.me/share/url?url=${shareUrl}`; // Example for Twitter
+                    // You can add other social media share URLs here
+
+                    window.open(sharePopupUrl1, 'Share', 'width=600, height=400');
+                }
+            };
+
+
+            document.querySelectorAll('.share-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const postId = button.getAttribute('data-post-id');
+                const postUrl = `https://example.com/dashboard/${postId}`; // Replace "example.com" with the actual URL of the blog post
+
+                // Use closest to get the parent container
+                const postContainer = document.querySelector(`#${postId}`);
+                if (postContainer) {
+                    const postTitle = postContainer.querySelector('h1').textContent; // Get the post title from h1
+                    shareContent(postUrl, postTitle);
+                } else {
+                    console.error('Post container not found for ID:', postId);
+                }
+            });
+        });
+        });
+    </script>
+    
+
+
+</body>
+</html>

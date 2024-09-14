@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuggyBillions Community Blog</title>
+    <link rel="icon" href="images/asset11.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsiveness.css">
+
+    <link rel="stylesheet" href="resources/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="resources/tabler-icons/webfont/tabler-icons.min.css">
+</head>
+<body>
+
+
+    <div class="overflow-x-hidden">
+
+        <nav class="navbar navbar-expand-lg py-3 fixed-top">
+            <div class="container d-flex flex-row justify-content-between">
+                <a class="navbar-brand" href="#">
+                    <img src="images/img2.png" alt="..." class="img-fluid d-none d-lg-block">
+                    <img src="images/img15.png" alt="..." class="img-fluid d-lg-none">
+                </a>
+                <form role="search" class="border d-lg-flex d-md-flex search-bar py-4 align-items-center mx-auto d-none">
+                    <input type="text" class="form-control bg-transarent">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                </form>
+                <div class="d-flex durrr gap-4 align-items-center">
+                    <button class="btn d-block p-0 d-lg-none d-md-none" id="openSearch"><i class="fa fa-search"></i></button>
+                    <a href="create.html" class="nav-link d-flex align-items-center gap-2">
+                        <i class="fa fa-edit"></i>
+                        <span class="d-none d-lg-block">Write</span>
+                    </a>              
+                    <button class="davi d-flex align-items-center gap-2 justify-content-between">
+                        <div class="d-lg-flex d-md-flex flex-column align-items-start d-none">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                        <i class="fa fa-chevron-down d-lg-none d-md-none"></i>
+                        <img src="images/img6.png" alt="..." width="32px" height="32px" style="border-radius: 50%; clip-path: circle();">
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Popup -->
+        <div class="search-popup" id="searchPopup">
+            <div class="search-popup-content">
+                <input type="text" class="form-control" placeholder="Search..." id="searchPopupInput">
+                <button type="button" id="closeSearch">Search</button>
+            </div>
+        </div>
+        
+        <div class="menu-fl p-3" style="display: none;">
+            <div class="d-flex flex-column justify-content-between gap-3 h-100">
+                <div class="position-relative">
+                    <!-- SIDEBAR CONTENT -->
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                        <a href="#" class="py-2 rolll davi2 px-0">
+                            <img src="images/img2.png" alt="..." class="img-fluid mx-auto w-75">
+                            <small>can't take fun outta the developer.</small>
+                        </a>
+                        <div class="gap-0 flex-column align-items-start davi3">
+                            <span id="fullname">Farinde</span>
+                            <span id="username">@seniorcub</span>
+                        </div>
+                    </div>
+                    <nav class="navbar mt-2 bg-transarent">
+                        <ul class="navbar-nav w-100 flex-column gap-2">
+                            <a href="dashboard.html" class="nav-link rolll2 d-flex align-items-center" id="dashBtn">
+                                <i class="fa fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="#" class="nav-link rolll2 active current2 d-flex align-items-center" id="courseBtn">
+                                <i class="fa fa-newspaper"></i> 
+                                <span>My Blogs</span>
+                            </a>
+                            <a href="profile.html" class="nav-link rolll2 d-flex align-items-center" id="certifyBtn">
+                                <i class="fa fa-user"></i> 
+                                <span>Profile</span>
+                            </a>
+                            <a href="create.html" class="nav-link rolll2 d-flex align-items-center" id="chatBtn">
+                                <i class="fa fa-plus-square"></i> 
+                                <span>Create Post</span>
+                            </a>
+                            <a href="settings.html" class="nav-link rolll2 d-flex align-items-center" id="profileBtn">
+                                <i class="fa fa-cog"></i> 
+                                <span>Settings</span>
+                            </a>
+                            <a href="feedback.html" class="nav-link rolll2 d-flex align-items-center">
+                                <i class="fa fa-comment"></i> 
+                                <span>Feedback</span>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="py-1 d-flex align-items-center px-1 seclink" id="logOutBtn">
+                    <i class="ti ti-logout"></i> 
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="blogs my-blogs py-5 position-relative" style="margin-top: 3rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 id="total" style="background: #d9d9d9; width: max-content; padding: .7rem .5rem; border-radius: 10px;">Total Blogs : <span>8</span></h3>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-1" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-2" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-3" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-4" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-5" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-6" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-7" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 d-flex flex-column gap-3">
+                        <div class="card blog-card d-flex flex-row" id="post-8" data-category="design">
+                            <div class="card-img" style="width: 25%;">
+                                <img src="images/img7.png" alt="..." class="img-fluid h-100">
+                            </div>
+                            <div class="card-text p-3 d-flex flex-column border-0" style="width: 75%; gap: 2.2rem;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Category&nbsp;:&nbsp;design</span>
+                                        <div class="">
+                                            <span>Publish date&nbsp;:</span>
+                                            <small class="date ms-auto">&nbsp;9 Sept 2024</small>
+                                        </div>
+                                    </div>
+                                    <h1 class="m-0 p-0" style="text-decoration: underline;opacity: 90%;">Title&nbsp;: What do I see IN mosko , Shey oun Whine me ni</h1>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <a href="read.html"><button class="btn blog-btn">View</button></a>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>
+                                            <span>Total comments&nbsp;:</span>
+                                            <span>&nbsp;3</span>
+                                        </div>
+                                        <div>
+                                            <span>Total likes&nbsp;:</span>
+                                            <span>&nbsp;4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    
+    <script src="resources/bootstrap.bundle.min.js"></script>
+    <script src="resources/bootstrap.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load liked posts from localStorage
+            const likedPosts = JSON.parse(localStorage.getItem('likedPosts')) || {};
+        
+            document.querySelectorAll('.ui-like').forEach(likeLabel => {
+                const postId = likeLabel.getAttribute('data-post-id');
+                const checkbox = likeLabel.querySelector('input');
+        
+                checkbox.checked = likedPosts[postId] || false;
+        
+                checkbox.addEventListener('change', () => {
+                    likedPosts[postId] = checkbox.checked;
+                    localStorage.setItem('likedPosts', JSON.stringify(likedPosts));
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Get elements
+        const searchIcon = document.getElementById('openSearch');
+        const searchPopup = document.getElementById('searchPopup');
+        const closeSearch = document.getElementById('closeSearch');
+        const searchPopupInput = document.getElementById("searchPopupInput");
+
+        // Show popup when the search icon is clicked
+        searchIcon.addEventListener('click', function() {
+            searchPopup.style.display = 'flex';
+        });
+
+        // Hide popup when the search button is clicked
+        closeSearch.addEventListener('click', function() {
+            searchPopup.style.display = 'none';
+
+            const selectedCategory = searchPopupInput.value;
+
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            blogCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                if (cardCategory === selectedCategory) {
+                    card.classList.remove('d-none');
+                    card.classList.add('d-flex');
+                } else {
+                    card.classList.remove('d-flex');
+                    card.classList.add('d-none');
+                }
+            });
+        });
+
+        // Also hide popup when clicking outside of the search content
+        searchPopup.addEventListener('click', function(e) {
+            if (e.target === searchPopup) {
+                searchPopup.style.display = 'none';
+            }
+        });
+    </script>
+
+
+</body>
+</html>
