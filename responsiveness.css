@@ -231,6 +231,34 @@
     .menu-fl{
         top: 70px;
     }
+    #indexBody{
+        height: 100vh !important;
+        overflow: hidden;
+        position: relative;
+    }
+    #indexBody:after{
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        overflow: hidden;
+        right: -10% !important;
+        width: 537px;
+        height: 337px;
+        border-radius: 60%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .herosection .card h1{
+        font-size: 56px;
+        line-height: 60.61px;
+    }
+    .herosection .card .hero-btn{
+        width: 203px;
+    }
+    .herosection .card-img img{
+        width: 70%;
+        transform: translateX(-5%) translateY(-20%);
+    }
 }
 
 @media (min-width: 767px) and (max-width: 991px) { 
@@ -276,6 +304,31 @@
     .fullblog .read-bg,
     .my-blogs .read-bg{
         height: 30vh;
+    }
+    #indexBody{
+        height: 100vh !important;
+        overflow: hidden;
+        position: relative;
+    }
+    #indexBody:after{
+        content: "";
+        position: absolute;
+        bottom: -24%;
+        overflow: hidden;
+        right: -10% !important;
+        width: 737px;
+        height: 737px;
+    }
+    .herosection .card h1{
+        font-size: 56px;
+        line-height: 60.61px;
+    }
+    .herosection .card .hero-btn{
+        width: 203px;
+    }
+    .herosection .card-img img{
+        width: 90%;
+        transform: translateX(-10%) translateY(-10%);
     }
 }
 
